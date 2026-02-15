@@ -1,125 +1,138 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Grace 🎉</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Grace 🎉</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<style>
-    body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, "Sarabun", sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    .card {
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        max-width: 600px;
-        animation: fadeIn 2s ease;
-    }
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 90%;
+            width: 400px;
+            animation: fadeIn 1.5s ease;
+            z-index: 10;
+        }
 
-    h1 {
-        color: #ff4d6d;
-        font-size: 3em;
-        margin-bottom: 10px;
-    }
+        h1 {
+            color: #ff4d6d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-    h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
+        h2 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
 
-    button {
-        margin-top: 20px;
-        padding: 14px 28px;
-        font-size: 1em;
-        border: none;
-        border-radius: 30px;
-        background: #ff4d6d;
-        color: white;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            background: #ff4d6d;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+        }
 
-    button:hover {
-        background: #e63956;
-    }
+        button:hover {
+            background: #e63956;
+            transform: scale(1.05);
+        }
 
-    @keyframes fadeIn {
-        from {opacity: 0; transform: translateY(30px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
 
-    /* ลูกโป่ง */
-    .balloon {
-        position: absolute;
-        bottom: -150px;
-        width: 60px;
-        height: 80px;
-        border-radius: 50%;
-        animation: float 8s infinite ease-in;
-    }
+        /* ลูกโป่ง */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float 8s infinite ease-in;
+        }
 
-    @keyframes float {
-        from {transform: translateY(0);}
-        to {transform: translateY(-120vh);}
-    }
-</style>
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-120vh) rotate(20deg); }
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="card">
-    <h1>🎂 Happy Birthday 🎉</h1>
+    <h1>🎂 HBD 🎉</h1>
     <h2>สุขสันต์วันเกิด คุณเกรซ 💖</h2>
-
     <button onclick="showMessage()">
         กดเพื่อรับคำอวยพร 🎁
     </button>
 </div>
 
+<div class="balloon" style="left:10%; background:#ff4d6d; animation-duration: 7s;"></div>
+<div class="balloon" style="left:30%; background:#ffd166; animation-delay: 2s; animation-duration: 9s;"></div>
+<div class="balloon" style="left:50%; background:#06d6a0; animation-delay: 4s; animation-duration: 6s;"></div>
+<div class="balloon" style="left:70%; background:#118ab2; animation-delay: 1s; animation-duration: 10s;"></div>
+<div class="balloon" style="left:90%; background:#9b5de5; animation-delay: 3s; animation-duration: 8s;"></div>
+
 <script>
 function showMessage() {
-    alert(`แฮปๆวันเกิดนะครับคุณเกรซ
-
-โค๊ดที่ผมทำอาจจะไม่ได้สวยมาก แต่ผมตั้งใจทำให้นะครับ 
-อันนี้คือโปรเจกต์ที่ว่าก็คืออันนี้แหละครับ5555363635555 
-
-ครับก็วันนี้เป็นวันเกิดคุณ ไม่ได้คิดว่าจะทำอะไรแบบนี้ 
-แต่เพราะความผิดพลาดเล็กน้อยทำให้ผมคิดทำโปรเจกต์อันนี้ขึ้นมา
-(ผมตั้งใจจะให้ของคุณแต่ก็อย่างที่รู้นั่นแหละครับ555536363555)
-
-ผมอวยพรไม่เก่ง แต่เอาเป็นว่า ยังไงก็ขอบคุณที่เข้ามาเมคเฟรนด์กันนะครับคุณเกรซ 
-ผมขอให้คุณเกรซมีความสุขยิ้มเยอะๆ รักตัวเอง เป็นคนอบอุ่น ใส่ใจ ร่าเริงแบบนี้ไปนานๆเลยนะครับ 
-
-ยินดีมากๆที่ได้รู้จักกันนะครับ 
-อะไรที่ผิดใจกันผมก็อยากให้คุณเกรซให้อภัยผมนะครับ 
-ผมไม่ได้อยากให้คุณเกรซรู้สึกไม่ดีเลยย 
-
-ก็อยู่เกกันไปนานๆเลยนะครับเบบี้ช้อน 🤍
-
-ขอบคุณที่อ่านนะครับ 
-ขอให้ปีนี้เป็นปีที่ดีของคุณเกรซนะครับ  
-
-บ๊ายบายครับ! 🎉`);
+    Swal.fire({
+        title: 'ถึง... คุณเกรซ 🎂',
+        html: `
+            <div style="text-align: left; font-family: 'Sarabun', sans-serif; line-height: 1.8; color: #444;">
+                แฮปๆวันเกิดนะครับคุณเกรซ<br><br>
+                โค๊ดที่ผมทำอาจจะไม่ได้สวยมาก แต่ผมตั้งใจทำให้นะครับ <br>
+                อันนี้คือโปรเจกต์ที่ว่าก็คืออันนี้แหละครับ 5555363635555 <br><br>
+                ครับก็วันนี้เป็นวันเกิดคุณ ไม่ได้คิดว่าจะทำอะไรแบบนี้ <br>
+                แต่เพราะความผิดพลาดเล็กน้อยทำให้ผมคิดทำโปรเจกต์อันนี้ขึ้นมา<br>
+                (ผมตั้งใจจะให้ของคุณแต่ก็อย่างที่รู้นั่นแหละครับ 555536363555)<br><br>
+                ผมอวยพรไม่เก่ง แต่เอาเป็นว่า ยังไงก็ขอบคุณที่เข้ามาเมคเฟรนด์กันนะครับคุณเกรซ <br>
+                ผมขอให้คุณเกรซมีความสุขยิ้มเยอะๆ รักตัวเอง เป็นคนอบอุ่น ใส่ใจ ร่าเริงแบบนี้ไปนานๆเลยนะครับ <br><br>
+                ยินดีมากๆที่ได้รู้จักกันนะครับ <br>
+                อะไรที่ผิดใจกันผมก็อยากให้คุณเกรซให้อภัยผมนะครับ <br>
+                ผมไม่ได้อยากให้คุณเกรซรู้สึกไม่ดีเลยย <br><br>
+                ก็อยู่เกกันไปนานๆเลยนะครับเบบี้ช้อน 🤍<br><br>
+                ขอบคุณที่อ่านนะครับ <br>
+                ขอให้ปีนี้เป็นปีที่ดีของคุณเกรซนะครับ <br><br>
+                <b>บ๊ายบายครับ! 🎉</b>
+            </div>
+        `,
+        confirmButtonText: 'รับทราบครับ! 💖',
+        confirmButtonColor: '#ff4d6d',
+        showClass: {
+            popup: 'animate__animated animate__zoomIn'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOut'
+        }
+    });
 }
 </script>
-
-<!-- ลูกโป่ง -->
-<div class="balloon" style="left:10%; background:#ff4d6d;"></div>
-<div class="balloon" style="left:30%; background:#ffd166; animation-delay:2s;"></div>
-<div class="balloon" style="left:50%; background:#06d6a0; animation-delay:4s;"></div>
-<div class="balloon" style="left:70%; background:#118ab2; animation-delay:1s;"></div>
-<div class="balloon" style="left:90%; background:#9b5de5; animation-delay:3s;"></div>
 
 </body>
 </html>
